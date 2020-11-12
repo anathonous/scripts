@@ -1,0 +1,56 @@
+#!/bin/sh
+
+love[0]=""
+love[1]="http://live-icy.gss.dr.dk:80/A/A03L.mp3"
+love[2]="http://live-icy.gss.dr.dk:80/A/A04L.mp3"
+love[3]="http://live-icy.gss.dr.dk:80/A/A05L.mp3"
+love[4]="http://live-icy.gss.dr.dk/A/A06L.mp3"
+love[5]="http://live-icy.gss.dr.dk/A/A15L.mp3"
+love[6]="http://live-icy.gss.dr.dk/A/A07L.mp3"
+love[7]="http://live-icy.gss.dr.dk/A/A08L.mp3"
+love[8]="http://live-icy.gss.dr.dk/A/A09L.mp3"
+love[9]="http://live-icy.gss.dr.dk/A/A10L.mp3"
+love[10]="http://live-icy.gss.dr.dk/A/A11L.mp3"
+love[11]="http://live-icy.gss.dr.dk/A/A12L.mp3"
+love[12]="http://live-icy.gss.dr.dk/A/A13L.mp3"
+love[13]="http://live-icy.gss.dr.dk/A/A14L.mp3"
+love[14]="http://live-icy.gss.dr.dk/A/A25L.mp3"
+love[15]="http://live-icy.gss.dr.dk/A/A29L.mp3"
+love[16]="http://live-icy.gss.dr.dk/A/A21L.mp3"
+love[17]="http://live-icy.gss.dr.dk/A/A22L.mp3"
+love[18]="http://live-icy.gss.dr.dk/A/A02L.mp3"
+
+lovel[0]=""
+lovel[1]="DR P1"
+lovel[2]="DR P2"
+lovel[3]="DR P3"
+lovel[4]="DR P4 Bornholm"
+lovel[5]="DR P4 Esbjerg"
+lovel[6]="DR P4 Fyn"
+lovel[7]="DR P4 Kobenhavn"
+lovel[8]="DR P4 Midt Vest"
+lovel[9]="DR P4 Nordjylland"
+lovel[10]="DR P4 Sjaelland"
+lovel[11]="DR P4 Syd"
+lovel[12]="DR P4 Trekanten"
+lovel[13]="DR P4 Ostjlland"
+lovel[14]="DR P5"
+lovel[15]="DR P6 Beat"
+lovel[16]="DR P7 Mix"
+lovel[17]="DR P8 Jazz"
+lovel[18]="DR Nyheder"
+
+if [ $# -eq 0 ]
+then
+echo "
+
+DR Radio Denmark
+
+usage drradio 1"
+for ((i=0; i<${#love[@]}; i++))
+do
+echo $i . ${lovel[$i]} 
+done
+exit 1
+fi
+ mpg123 ${love[${1}]} | grep -E "icy-name A:|title"
