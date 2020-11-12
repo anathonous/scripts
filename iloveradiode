@@ -1,0 +1,76 @@
+#!/bin/bash
+
+love[0]=""
+love[1]="https://streams.ilovemusic.de/iloveradio1.mp3"
+love[2]="https://streams.ilovemusic.de/iloveradio2.mp3"
+love[3]="https://streams.ilovemusic.de/iloveradio6.mp3"
+love[4]="https://streams.ilovemusic.de/iloveradio16.mp3"
+love[5]="https://streams.ilovemusic.de/iloveradio21.mp3"
+love[6]="https://streams.ilovemusic.de/iloveradio12.mp3"
+love[7]="https://streams.ilovemusic.de/iloveradio22.mp3"
+love[8]="http://streams.ilovemusic.de/iloveradio5.mp3"
+love[9]="http://streams.ilovemusic.de/iloveradio10.mp3"
+love[10]="https://streams.ilovemusic.de/iloveradio14.mp3"
+love[11]="https://streams.ilovemusic.de/iloveradio11.mp3"
+love[12]="https://streams.ilovemusic.de/iloveradio18.mp3"
+love[13]="https://streams.ilovemusic.de/iloveradio3.mp3"
+love[14]="https://streams.ilovemusic.de/iloveradio7.mp3"
+love[15]="https://streams.ilovemusic.de/iloveradio20.mp3"
+love[16]="https://streams.ilovemusic.de/iloveradio4.mp3"
+love[17]="https://streams.ilovemusic.de/iloveradio15.mp3"
+love[18]="https://streams.ilovemusic.de/iloveradio9.mp3"
+love[19]="https://streams.ilovemusic.de/iloveradio13.mp3"
+love[20]="https://streams.ilovemusic.de/iloveradio8.mp3"
+love[21]="https://streams.ilovemusic.de/iloveradio109.mp3"
+love[22]="https://streams.ilovemusic.de/iloveradio103.mp3"
+love[23]="https://streams.ilovemusic.de/iloveradio105.mp3"
+love[24]="https://streams.ilovemusic.de/iloveradio104.mp3"
+love[25]="https://streams.ilovemusic.de/iloveradio108.mp3"
+love[26]="https://streams.ilovemusic.de/iloveradio106.mp3"
+
+
+lovel[0]=""
+lovel[1]="I<3Radio"
+lovel[2]="I<3Dance"
+lovel[3]="I<3Deutschrap Beste"
+lovel[4]="I<3Greatest Hits"
+lovel[5]="I<3Hardstyle"
+lovel[6]="I<3Hits History"
+lovel[7]="I<3Mainstage"
+lovel[8]="I<3Mashup"
+lovel[9]="I<3Music&Chill"
+lovel[10]="I<3Party Hard"
+lovel[11]="I<3Popstars"
+lovel[12]="I<3Robin Schulz"
+lovel[13]="I<3The Battle"
+lovel[14]="I<3The Beach"
+lovel[15]="I<3The Club"
+lovel[16]="I<3The DJ by DJ Mag"
+lovel[17]="I<3The Sun"
+lovel[18]="I<3Top 100 Charts"
+lovel[19]="I<3US Only Rap Radio"
+lovel[20]="I<3X-Mas"
+lovel[21]="Top 100 Hits 2020"
+lovel[22]="Top 40 Dance & DJs"
+lovel[23]="TOP 40 Deutschpop"
+lovel[24]="Top 40 Deutschrap"
+lovel[25]="Top 40 Hip Hop"
+lovel[26]="Top 40 Hip Hop US"
+
+
+
+
+if [ $# -eq 0 ]
+then
+echo "
+
+I<3Radio Germany
+Requires mpv
+usage iloveradiode 1"
+for ((i=0; i<${#love[@]}; i++))
+do
+echo $i . ${lovel[$i]} 
+done
+exit 1
+fi
+ mpv ${love[${1}]} | grep -E "icy-name A:|title"
