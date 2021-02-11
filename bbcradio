@@ -1,0 +1,44 @@
+#!/bin/bash
+
+love[0]=""
+love[1]="http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio1_mf_p"
+love[2]="http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio1xtra_mf_p"
+love[3]="http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio2_mf_p"
+love[4]="http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio3_mf_p"
+love[5]="http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio4fm_mf_p"
+love[6]="http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio4lw_mf_p"
+love[7]="http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio4extra_mf_p"
+love[8]="http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio5live_mf_p"
+love[9]="http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio5extra_mf_p"
+love[10]="http://bbcmedia.ic.llnwd.net/stream/bbcmedia_6music_mf_p"
+love[11]="http://bbcmedia.ic.llnwd.net/stream/bbcmedia_asianet_mf_p"
+love[12]="http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-eieuk"
+love[13]="http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-einws"
+
+lovel[0]=""
+lovel[1]="BBC Radio 1"
+lovel[2]="BBC Radio 1xtra"
+lovel[3]="BBC Radio 2"
+lovel[4]="BBC Radio 3"
+lovel[5]="BBC Radio 4FM"
+lovel[6]="BBC Radio 4LW"
+lovel[7]="BBC Radio 4 Extra"
+lovel[8]="BBC Radio 5"
+lovel[9]="BBC Radio 5 Live Sportsball Extra"
+lovel[10]="BBC Radio 6 Music"
+lovel[11]="BBC Asian Network"
+lovel[12]="BBC World Service UK"
+lovel[13]="BBC World Service News"
+if [ $# -eq 0 ]
+then
+echo "
+BBC Radio UK
+
+usage bbcradio 1"
+for ((i=0; i<${#love[@]}; i++))
+do
+echo $i . ${lovel[$i]} 
+done
+exit 1
+fi
+ mpv ${love[${1}]} 
