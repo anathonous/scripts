@@ -1,0 +1,25 @@
+#!/bin/bash
+
+love[0]=""
+love[1]="http://livestream.cprnetwork.org/pls/live_newsinfo_aac.pls"
+love[2]="http://livestream.cprnetwork.org/pls/live_classical_aac.pls"
+love[3]="http://livestream.cprnetwork.org/pls/live_openair_aac.pls"
+
+
+lovel[0]=""
+lovel[1]="Colorado Public Radio News"
+lovel[2]="Colorado Public Radio Classical"
+lovel[3]="Indie"
+
+if [ $# -eq 0 ]
+then
+echo "
+Colorado Public Radio 
+usage coloradopublicradio 1"
+for ((i=0; i<${#love[@]}; i++))
+do
+echo $i . ${lovel[$i]} 
+done
+exit 1
+fi
+ mpv ${love[${1}]} | grep -E "icy-name A:|title"
