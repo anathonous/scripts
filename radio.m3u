@@ -1,0 +1,20 @@
+#EXTM3U
+#PLAYLIST:intradio
+#EXTINF:-1  tvg-logo="https://images.radiovolna.net/_files/images/stations/297/uyhy595f3836e0f6f332614304.jpg" group-title="Radio", Radio Ultra Russia
+https://nashe1.hostingradio.ru/ultra-128.mp3
+#EXTINF:-1  tvg-logo="https://www.dentungeradio.dk/wp-content/uploads/2015/04/dtr_logo_24t.jpg" group-title="Radio", Den Tunge Denmark
+https://stream.metalradio.dk:9870/dtr.mp3
+#EXTINF:-1  tvg-logo="https://www.radioguide.fm/uploads/images/radiostation/1200px-DR_P3_logo_2020.svg.png" group-title="Radio", DR P3 Denmark
+https://drliveradio.akamaized.net/hls/live/2022411/p3/masterab.m3u8
+#EXTINF:-1  tvg-logo="https://cms-assets.nporadio.nl/npo3fm/archief/_articleHeaderS/04_57451960d5_3fm-logo-2020.jpg" group-title="Radio", NPO 3 Netherlands
+http://icecast.omroep.nl/3fm-bb-mp3
+#EXTINF:-1  tvg-logo="https://cdn-profiles.tunein.com/s189305/images/logod.png?t=637218711560000000" group-title="Radio", iloveradio Mashup Germany
+http://streams.ilovemusic.de/iloveradio5.mp3
+#EXTINF:-1  tvg-logo="https://digitalradio.it/wp-content/uploads/2020/01/Logo-Radio-Swiss-Classic.png" group-title="Radio", SRG Classical Switzerland
+https://stream.srg-ssr.ch/m/rsc_de/aacp_96
+#EXTINF:-1  tvg-logo="https://www.srf.ch/var/storage/assets/webpack/images/radio-srf-3-square.a0323d81.svg" group-title="Radio", SRG 3 Switzerland
+https://lsaplus.swisstxt.ch/audio/drs3_96.stream/playlist.m3u8
+#EXTINF:-1  tvg-logo="https://www.srf.ch/var/storage/assets/webpack/images/radio-srf-2-square.783a3a39.svg" group-title="Radio", SRG 2 Switzerland
+https://lsaplus.swisstxt.ch/audio/drs2_96.stream/playlist.m3u8
+#EXTINF:-1  tvg-logo="https://www.srf.ch/var/storage/assets/webpack/images/radio-srf-1-square.f2e7fed3.svg" group-title="Radio", SRG 1 Switzerland
+https://lsaplus.swisstxt.ch/audio/drs1_96.stream/playlist.m3u8

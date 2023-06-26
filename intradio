@@ -1,0 +1,77 @@
+#!/bin/bash
+
+love[0]=""
+love[1]="https://nashe1.hostingradio.ru/ultra-128.mp3"
+love[2]="https://stream.metalradio.dk:9870/dtr.mp3"
+love[3]="https://drliveradio.akamaized.net/hls/live/2022411/p3/masterab.m3u8"
+love[4]="http://icecast.omroep.nl/3fm-bb-mp3"
+love[5]="http://streams.ilovemusic.de/iloveradio5.mp3"
+love[6]="https://stream.srg-ssr.ch/m/rsc_de/aacp_96"
+love[7]="https://lsaplus.swisstxt.ch/audio/drs3_96.stream/playlist.m3u8"
+love[8]="https://lsaplus.swisstxt.ch/audio/drs2_96.stream/playlist.m3u8"
+love[9]="https://lsaplus.swisstxt.ch/audio/drs1_96.stream/playlist.m3u8"
+love[10]=""
+love[11]=""
+love[12]=""
+love[13]=""
+love[14]=""
+love[15]=""
+love[16]=""
+love[17]=""
+love[18]=""
+love[19]=""
+love[20]=""
+love[21]=""
+love[22]=""
+love[23]=""
+love[24]=""
+love[25]=""
+love[26]=""
+
+
+lovel[0]=""
+lovel[1]="Radio Ultra Russia"
+lovel[2]="Den Tunge Denmark"
+lovel[3]="DR P3 Denmark"
+lovel[4]="NPO 3 Netherlands"
+lovel[5]="iloveradio Mashup Germany"
+lovel[6]="SRG Classical Switzerland"
+lovel[7]="SRG 3 Switzerland"
+lovel[8]="SRG 2 Switzerland"
+lovel[9]="SRG 1 Switzerland"
+lovel[10]=""
+lovel[11]=""
+lovel[12]=""
+lovel[13]=""
+lovel[14]=""
+lovel[15]=""
+lovel[16]=""
+lovel[17]=""
+lovel[18]=""
+lovel[19]=""
+lovel[20]=""
+lovel[21]=""
+lovel[22]=""
+lovel[23]=""
+lovel[24]=""
+lovel[25]=""
+lovel[26]=""
+
+
+
+
+if [ $# -eq 0 ]
+then
+echo "
+
+ International Radio Streams
+Requires mpv
+usage intradio 1"
+for ((i=0; i<${#love[@]}; i++))
+do
+echo $i . ${lovel[$i]}
+done
+exit 1
+fi
+ mpv --display-tags=icy-title ${love[${1}]} --msg-level=cplayer=error
+
