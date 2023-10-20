@@ -11,8 +11,8 @@ love[7]="https://lsaplus.swisstxt.ch/audio/drs3_96.stream/playlist.m3u8"
 love[8]="https://lsaplus.swisstxt.ch/audio/drs2_96.stream/playlist.m3u8"
 love[9]="https://lsaplus.swisstxt.ch/audio/drs1_96.stream/playlist.m3u8"
 love[10]="http://icecast.live.yle.fi/radio/YleX3M/icecast.audio"
-love[11]=""
-love[12]=""
+love[11]="https://wr03-ice.stream.khz.se/wr03_aac"
+love[12]="https://fm02-ice.stream.khz.se/fm02_aac"
 love[13]=""
 love[14]=""
 love[15]=""
@@ -40,8 +40,8 @@ lovel[7]="SRG 3 Switzerland"
 lovel[8]="SRG 2 Switzerland"
 lovel[9]="SRG 1 Switzerland"
 lovel[10]="YLE X3 Suomi"
-lovel[11]=""
-lovel[12]=""
+lovel[11]="Bandit Metal Sweden"
+lovel[12]="Bandit Rock Sweden"
 lovel[13]=""
 lovel[14]=""
 lovel[15]=""
@@ -74,4 +74,3 @@ done
 exit 1
 fi
  mpv --display-tags=icy-title ${love[${1}]} --msg-level=cplayer=error
-
